@@ -1,18 +1,21 @@
 <template>
   <div class="container border text-center">
-	  <h3 class="mt-2">Mis Proyectos</h3>
-	  <img :src="gitPp" alt="" width="150" class="rounded">
+	  <h3 class="mt-2">Mis Repos</h3>
+	  <img :src="gitPp" alt="" width="200" class="rounded">
 	  <hr>
 	  <loader v-if="isLoading"/>
-	  <div class="row">
-		   <Card v-for="project in misProyectos" :key="project.id" 
-		   :repoTitle="project.name" 
-		   :repoDescription="project.description" 
-		   :repoDate="project.created_at.substring(0,4)"
-		   :repoUrl="project.html_url"
-		   :homeUrl="project.homepage"
-
-		   class="col-sm-6 mx-auto mt-2"/>
+	  <div class="container">
+		<div class="row py-4 g-2 d-flex align-items-stretch">
+			<div v-for="project in misProyectos" :key="project.id" 
+			class="col-sm-6">
+				<Card :repoTitle="project.name" 
+				:repoDescription="project.description" 
+				:repoDate="project.created_at.substring(0,4)"
+				:repoUrl="project.html_url"
+				:homeUrl="project.homepage"
+				/>
+			</div>
+		</div>
 	  </div>
   </div>
 </template>
