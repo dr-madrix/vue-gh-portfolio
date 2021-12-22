@@ -1,5 +1,5 @@
 <template>
-	<div class="container-fluid text-center p-2">
+	<div class="container-fluid text-center p-2 mb-2">
 		<h1 class="mt-2">{{headerTitle}}</h1>
 	</div>
 </template>
