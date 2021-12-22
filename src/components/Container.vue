@@ -5,7 +5,7 @@
 	  <hr>
 	  <loader v-if="isLoading"/>
 	  <div class="container">
-		<div class="row py-4 g-2 d-flex align-items-stretch">
+		<div class="row py-4 g-2">
 			<div v-for="project in misProyectos" :key="project.id" 
 			class="col-sm-6">
 				<Card :repoTitle="project.name" 
