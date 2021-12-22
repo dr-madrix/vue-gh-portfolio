@@ -1,7 +1,9 @@
 <template>
-  <Header header-title="El Portafolio de Adrix" />
+<div id="main-div" class="d-flex flex-column justify-content-between">
+  <Header header-title="Los repos de Dr. Madrix" />
   <container />
   <Footer />
+</div>
 </template>
 
 <script>
@@ -20,5 +22,7 @@ export default {
 </script>
 
 <style>
-
+#main-div{
+  height: 100vh;
+}
 </style>
